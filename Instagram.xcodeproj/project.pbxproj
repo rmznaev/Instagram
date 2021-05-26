@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,10 @@
 		C4144D41265CE9CC00BD9353 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4144D40265CE9CC00BD9353 /* PostEditorViewController.swift */; };
 		C4144D43265CE9F000BD9353 /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4144D42265CE9F000BD9353 /* PublishPostViewController.swift */; };
 		C4144D45265D098F00BD9353 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4144D44265D098F00BD9353 /* TabBarViewController.swift */; };
+		C48ED38D265D20AD001C91A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C48ED38C265D20AD001C91A0 /* GoogleService-Info.plist */; };
+		C48ED390265E1061001C91A0 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48ED38F265E1061001C91A0 /* DatabaseManager.swift */; };
+		C48ED392265E11A5001C91A0 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48ED391265E11A5001C91A0 /* AuthManager.swift */; };
+		C48ED394265E11EA001C91A0 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48ED393265E11EA001C91A0 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		C4144D40265CE9CC00BD9353 /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		C4144D42265CE9F000BD9353 /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
 		C4144D44265D098F00BD9353 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C48ED38C265D20AD001C91A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C48ED38F265E1061001C91A0 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		C48ED391265E11A5001C91A0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		C48ED393265E11EA001C91A0 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +84,6 @@
 				81FEA501B97854223608B4DC /* Pods-Instagram.debug.xcconfig */,
 				4A74600E3090BB573907F45B /* Pods-Instagram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,10 @@
 			children = (
 				C4144D0C265CD3C600BD9353 /* AppDelegate.swift */,
 				C4144D0E265CD3C600BD9353 /* SceneDelegate.swift */,
+				C48ED38C265D20AD001C91A0 /* GoogleService-Info.plist */,
+				C48ED38F265E1061001C91A0 /* DatabaseManager.swift */,
+				C48ED391265E11A5001C91A0 /* AuthManager.swift */,
+				C48ED393265E11EA001C91A0 /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,14 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				C4144D2F265CE4F700BD9353 /* Onboarding */,
-				C4144D34265CE80600BD9353 /* PostViewController.swift */,
-				C4144D36265CE83F00BD9353 /* EditProfileViewController.swift */,
-				C4144D38265CE85200BD9353 /* SettingsViewController.swift */,
-				C4144D3A265CE87300BD9353 /* ListViewController.swift */,
-				C4144D3C265CE89A00BD9353 /* SearchViewController.swift */,
-				C4144D3E265CE8A300BD9353 /* SearchResultViewController.swift */,
-				C4144D40265CE9CC00BD9353 /* PostEditorViewController.swift */,
-				C4144D42265CE9F000BD9353 /* PublishPostViewController.swift */,
+				C48ED38E265E0F8A001C91A0 /* General */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -188,6 +192,21 @@
 				C4144D32265CE7BE00BD9353 /* RegistrationViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C48ED38E265E0F8A001C91A0 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				C4144D34265CE80600BD9353 /* PostViewController.swift */,
+				C4144D36265CE83F00BD9353 /* EditProfileViewController.swift */,
+				C4144D38265CE85200BD9353 /* SettingsViewController.swift */,
+				C4144D3A265CE87300BD9353 /* ListViewController.swift */,
+				C4144D3C265CE89A00BD9353 /* SearchViewController.swift */,
+				C4144D3E265CE8A300BD9353 /* SearchResultViewController.swift */,
+				C4144D40265CE9CC00BD9353 /* PostEditorViewController.swift */,
+				C4144D42265CE9F000BD9353 /* PublishPostViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		DD57E642528A9747B7246472 /* Frameworks */ = {
@@ -259,6 +278,7 @@
 			files = (
 				C4144D19265CD3C800BD9353 /* LaunchScreen.storyboard in Resources */,
 				C4144D16265CD3C800BD9353 /* Assets.xcassets in Resources */,
+				C48ED38D265D20AD001C91A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,17 +334,20 @@
 				C4144D37265CE83F00BD9353 /* EditProfileViewController.swift in Sources */,
 				C4144D26265CE3B600BD9353 /* ExploreViewController.swift in Sources */,
 				C4144D43265CE9F000BD9353 /* PublishPostViewController.swift in Sources */,
+				C48ED394265E11EA001C91A0 /* StorageManager.swift in Sources */,
 				C4144D28265CE40200BD9353 /* CameraViewController.swift in Sources */,
 				C4144D45265D098F00BD9353 /* TabBarViewController.swift in Sources */,
 				C4144D11265CD3C600BD9353 /* HomeViewController.swift in Sources */,
 				C4144D33265CE7BE00BD9353 /* RegistrationViewController.swift in Sources */,
 				C4144D41265CE9CC00BD9353 /* PostEditorViewController.swift in Sources */,
 				C4144D35265CE80600BD9353 /* PostViewController.swift in Sources */,
+				C48ED392265E11A5001C91A0 /* AuthManager.swift in Sources */,
 				C4144D2A265CE41700BD9353 /* NotificationsViewController.swift in Sources */,
 				C4144D3F265CE8A300BD9353 /* SearchResultViewController.swift in Sources */,
 				C4144D31265CE79100BD9353 /* LoginViewController.swift in Sources */,
 				C4144D3D265CE89A00BD9353 /* SearchViewController.swift in Sources */,
 				C4144D2C265CE47100BD9353 /* ProfileViewController.swift in Sources */,
+				C48ED390265E1061001C91A0 /* DatabaseManager.swift in Sources */,
 				C4144D0D265CD3C600BD9353 /* AppDelegate.swift in Sources */,
 				C4144D0F265CD3C600BD9353 /* SceneDelegate.swift in Sources */,
 				C4144D3B265CE87300BD9353 /* ListViewController.swift in Sources */,
