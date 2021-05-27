@@ -163,7 +163,7 @@ class LoginViewController: UIViewController {
         
         loginButton.frame = CGRect(
             x: 25,
-            y: passwordField.bottom + 10,
+            y: passwordField.bottom + 20,
             width: view.width - 50,
             height: Constants.textFieldHeight
         )
@@ -266,7 +266,8 @@ class LoginViewController: UIViewController {
     
     @objc private func didTapCreateAccountButton() {
         let vc = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
 }
 
